@@ -1,0 +1,57 @@
+            <!-- Proszę Pani, nie zmieniałem wielkości obrazu specjalnie, bo wtedy nie mogłbym zrobić tło dla galerii na których są własnie obrazy samochodów. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Zdjęć</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="galeriaa">
+    <div class="galeriaaa">
+        <div class="main-image" id="mainImage">
+            <img src="img/galeria1.jpg" alt="Main Image" id="currentImage">
+        </div>
+        <div class="thumbnails" id="thumbnails">
+
+        </div>
+    </div>
+    <a href="index.html"><h1>Main Website</h1></a></li>
+    <footer>
+        <p>Davyd Bubnov 2tc</p>
+    </footer>
+    <script>
+        const images = [
+            'img/galeria1.jpg', 'img/galeria2.jpg', 'img/galeria3.jpg', 'img/galeria4.jpg', 'img/galeria5.jpg',
+            'img/galeria6.jpg', 'img/galeria7.jpg', 'img/galeria8.jpg', 'img/galeria9.jpg',
+        ];
+
+        const mainImage = document.getElementById('currentImage');
+        const thumbnailsContainer = document.getElementById('thumbnails');
+
+        images.forEach((src, index) => {
+            const thumbnail = document.createElement('div');
+            thumbnail.classList.add('thumbnail');
+            if (index === 0) thumbnail.classList.add('active');
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Thumbnail ${index + 1}`;
+
+            thumbnail.appendChild(img);
+            thumbnailsContainer.appendChild(thumbnail);
+
+            thumbnail.addEventListener('click', () => {
+                document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+                thumbnail.classList.add('active');
+                document.body.style.backgroundImage = `url('${src}')`;
+                mainImage.style.opacity = '0';
+                setTimeout(() => {
+                    mainImage.src = src;
+                    mainImage.style.opacity = '1';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,977 @@
+body {
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; 
+}
+
+.blur-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(5px); 
+    padding: 10px 30px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    z-index: 1; 
+}
+
+h1, h2, h3 {
+    margin: 0;
+    color: #1e1e1e;
+}
+
+h1 {
+    font-size: 240px;
+}
+
+h2 {
+    font-size: 110px;
+    font-family: impact;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; 
+    height: 700px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 8px; 
+    animation: rotate-logo 2s ease-out; 
+}
+
+.logo img {
+    padding-left: 10px;
+    margin-top: 5px;
+    width: 80%; 
+    height: 80%;
+    object-fit: contain;
+    animation: spin 2s ease-out;
+    transform-origin: 56% 50%;
+}
+
+
+.logo:nth-child(1) { transform: rotate(0deg) translate(350px) rotate(0deg); }
+.logo:nth-child(2) { transform: rotate(51.43deg) translate(350px) rotate(-51.43deg); }
+.logo:nth-child(3) { transform: rotate(102.86deg) translate(350px) rotate(-102.86deg); }
+.logo:nth-child(4) { transform: rotate(154.29deg) translate(350px) rotate(-154.29deg); }
+.logo:nth-child(5) { transform: rotate(205.71deg) translate(350px) rotate(-205.71deg); }
+.logo:nth-child(6) { transform: rotate(257.14deg) translate(350px) rotate(-257.14deg); }
+.logo:nth-child(7) { transform: rotate(308.57deg) translate(350px) rotate(-308.57deg); }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); translate: (350px);
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    width: 95%;
+    bottom: 0;
+    background-color: black;
+    height: 50px;
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.ferrari {
+    background-image: url('img/ferrari.jpg');
+}
+body.ferrari {
+    background-image: url('img/ferrari.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; 
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+body.ferrari:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.ferrari {
+    font-family: 'Arial', sans-serif;
+    color: white; 
+    line-height: 1.5; 
+    font-size: 16px; 
+}
+
+
+section {
+    padding: 40px 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 70px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #cc0000;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-bottom: 17px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+
+video {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+
+@media (max-width: 600px) {
+    body.ferrari {
+        font-size: 14px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    body.ferrari {
+        font-size: 16px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    body.ferrari {
+        font-size: 18px;
+    }
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+body.ferrari h1, 
+body.ferrari h2, 
+body.ferrari h3, 
+body.ferrari h4, 
+body.ferrari h5, 
+body.ferrari h6 {
+    color: white;
+    font-family: impact, sans-serif; 
+    text-transform: uppercase;
+}
+.ferrari footer{
+position: fixed;
+text-align: center;
+width: 95%;
+background-color: black;
+height: 60px;
+color: aliceblue;
+background: rgba(0, 0, 0, 0.4); 
+backdrop-filter: blur(10px); 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+border-radius: 100px;
+}
+#map {
+    margin-bottom: 90px;
+}
+body.ferrari h2 {
+    font-size: 60px;
+}
+#scrollToTop {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#scrollToTop:hover {
+    background-color: #b90000;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+body.audi {
+    background-image: url('img/audi_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; 
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+body.audi:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.audi {
+    font-family: 'Arial', sans-serif;
+    color: white; 
+    line-height: 1.5; 
+    font-size: 16px; 
+}
+
+
+section {
+    padding: 40px 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 70px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #cc0000;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-bottom: 17px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+
+video {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+
+@media (max-width: 600px) {
+    body.audi {
+        font-size: 14px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    body.audi {
+        font-size: 16px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+body.audi h1, 
+body.audi h2, 
+body.audi h3, 
+body.audi h4, 
+body.audi h5, 
+body.audi h6 {
+    color: white;
+    font-family: impact, sans-serif; 
+    text-transform: uppercase;
+}
+body.audi h2 {
+    font-size: 60px;
+}
+.audi footer{
+    position: fixed;
+    text-align: center;
+    width: 95%;
+    background-color: black;
+    height: 60px;
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 100px;
+    }
+    body.aston_martin {
+        background-image: url('img/aston_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Arial', sans-serif; 
+        color: white;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    body.aston_martin:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+    .aston_martin footer{
+    position: fixed;
+    text-align: center;
+    width: 95%;
+    background-color: black;
+    height: 60px;
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 100px;
+    }
+body.aston_martin h1, 
+body.aston_martin h2, 
+body.aston_martin h3, 
+body.aston_martin h4, 
+body.aston_martin h5, 
+body.aston_martin h6 {
+    color: white;
+    font-family: impact, sans-serif; 
+    text-transform: uppercase;
+}
+body.aston_martin h2 {
+    font-size: 60px;
+}
+body.aston_martin h1 {
+    font-size: 200px;
+}
+
+body.bmw {
+    background-image: url('img/bmw_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; 
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+body.bmw:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.bmw footer{
+position: fixed;
+text-align: center;
+width: 95%;
+background-color: black;
+height: 60px;
+color: aliceblue;
+background: rgba(0, 0, 0, 0.4); 
+backdrop-filter: blur(10px); 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+border-radius: 100px;
+}
+body.bmw h1, 
+body.bmw h2, 
+body.bmw h3, 
+body.bmw h4, 
+body.bmw h5, 
+body.bmw h6 {
+color: white;
+font-family: impact, sans-serif; 
+text-transform: uppercase;
+}
+body.bmw h2 {
+font-size: 60px;
+}
+body.bmw h1 {
+font-size: 200px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body.bentley {
+    background-image: url('img/bentley_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; 
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+body.bentley:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.bentley footer{
+position: fixed;
+text-align: center;
+width: 95%;
+background-color: black;
+height: 60px;
+color: aliceblue;
+background: rgba(0, 0, 0, 0.4); 
+backdrop-filter: blur(10px); 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+border-radius: 100px;
+}
+body.bentley h1, 
+body.bentley h2, 
+body.bentley h3, 
+body.bentley h4, 
+body.bentley h5, 
+body.bentley h6 {
+color: white;
+font-family: impact, sans-serif; 
+text-transform: uppercase;
+}
+body.bentley h2 {
+font-size: 60px;
+}
+body.bentley h1 {
+font-size: 200px;
+}
+
+body.bugatti {
+    background-image: url('img/bugatti_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; 
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+body.bugatti:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.bugatti footer{
+position: fixed;
+text-align: center;
+width: 95%;
+background-color: black;
+height: 60px;
+color: aliceblue;
+background: rgba(0, 0, 0, 0.4); 
+backdrop-filter: blur(10px); 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+border-radius: 100px;
+}
+body.bugatti h1, 
+body.bugatti h2, 
+body.bugatti h3, 
+body.bugatti h4, 
+body.bugatti h5, 
+body.bugatti h6 {
+color: white;
+font-family: impact, sans-serif; 
+text-transform: uppercase;
+}
+body.bugatti h2 {
+font-size: 60px;
+}
+body.bugatti h1 {
+font-size: 200px;
+}
+
+
+
+
+body.mercedes {
+    background-image: url('img/mercedes_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; 
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+body.mercedes:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.mercedes footer{
+position: fixed;
+text-align: center;
+width: 95%;
+background-color: black;
+height: 60px;
+color: aliceblue;
+background: rgba(0, 0, 0, 0.4); 
+backdrop-filter: blur(10px); 
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+border-radius: 100px;
+}
+body.mercedes h1, 
+body.mercedes h2, 
+body.mercedes h3, 
+body.mercedes h4, 
+body.mercedes h5, 
+body.mercedes h6 {
+color: white;
+font-family: impact, sans-serif; 
+text-transform: uppercase;
+}
+body.mercedes h2 {
+font-size: 60px;
+}
+body.mercedes h1 {
+font-size: 200px;
+}
+.animated-car {
+    position: absolute;
+    height: auto; 
+    animation-duration: 1.3s; 
+    animation-fill-mode: forwards; 
+    opacity: 0; 
+    top: 150px;
+    left: -150px; 
+    animation-name: slideInFromLeft; 
+    animation-delay: 0.2s; 
+    animation-timing-function: ease-in; 
+}
+@keyframes slideInFromLeft {
+    from {
+        left: -150px; 
+        opacity: 0; 
+    }
+    to {
+        left: 70px; 
+        opacity: 0.8; 
+    }
+}
+
+.galeria-tekst h2{
+    animation-duration: 1.3s; 
+    animation-fill-mode: forwards; 
+    opacity: 0; 
+    position: absolute;
+    font-size: 50px;
+    top: 70px;
+    left: 120px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    animation-name: tekst; 
+    animation-delay: 0.2s; 
+    animation-timing-function: ease-in; 
+}
+@keyframes tekst {
+    from {
+        left: -110px; 
+        opacity: 0; 
+    }
+    to {
+        left: 130px; 
+        opacity: 0.8; 
+    }
+}
+
+body.galeriaa {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-image: url('galeria1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: background-image 0.5s ease-in-out;
+}
+.galeriaaa {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-image {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.main-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.main-image:hover::after {
+    opacity: 1;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+.galeriaa h1 {
+text-align: center;
+color: white;
+background-color: black;
+width: fit-content;
+padding: 10px 20px;
+margin: 20px auto;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+font-size: 24px;
+transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+a {
+text-decoration: none;
+}
+
+.galeriaa h1:hover {
+transform: scale(1.1);
+background-color: #333;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    border-color: #007BFF;
+    border-radius: 15px;
+}
+
+.thumbnail.active {
+    border-color: #007BFF;
+    border-radius: 15px;
+}
+.galeriaaa footer{
+    position: fixed;
+    text-align: center;
+    width: 95%;
+    background-color: black;
+    height: 60px;
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 100px;
+    }
